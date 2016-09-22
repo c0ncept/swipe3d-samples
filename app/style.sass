@@ -1,0 +1,76 @@
+body,html,.application
+  height: 100%
+  width: 100%
+
+*
+  margin: 0px
+  padding: 0px
+  box-sizing: border-box
+  cursor: default
+body
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.application
+  background-color: #fff
+  display: flex
+
+.mobile-wrapper
+  position: relative
+  display: flex
+  margin: auto
+  flex-direction: column
+  width: 300px
+  height: 480px
+  overflow: hidden
+  background: radial-gradient(#4a148c, lighten(#4a148c, 5%))
+  box-shadow: 1px 1px 5px #444
+
+.mobile
+  &-container
+    height: 100%
+
+  =navItem
+    width: 100%
+    position: absolute
+    left: 0px
+    top: 0px
+
+  &_nav
+    position: absolute
+    height: 20px
+    line-height: 20px
+    width: 96%
+    left: 8px
+    color: #fff
+    font-size: 12px
+    z-index: 10
+    pointer-events: none
+
+
+  &_nav--dots
+    display: inline-block
+    & > span
+      display: block
+      float: left
+      background: #fff
+      width: 5px
+      height: 5px
+      border-radius: 100%
+      margin: 0px 1px
+
+  &_nav--left
+    +navItem
+
+  &_nav--center
+    +navItem
+    font-weight: bold
+    text-align: center
+
+  &_nav--right
+    +navItem
+    text-align: right

@@ -1,0 +1,3 @@
+[submodule "swipe3d"]
+	path = swipe3d
+	url = https://github.com/linuxenko/swipe3d.git
