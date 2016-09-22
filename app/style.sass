@@ -1,6 +1,7 @@
 body,html,.application
   height: 100%
   width: 100%
+  font-family: monospace
 
 *
   margin: 0px
@@ -21,14 +22,47 @@ body
 
 .mobile-wrapper
   position: relative
-  display: flex
   margin: auto
-  flex-direction: column
   width: 300px
   height: 480px
   overflow: hidden
   background: radial-gradient(#4a148c, lighten(#4a148c, 5%))
   box-shadow: 1px 1px 5px #444
+
+.screen-wrapper
+  display: flex
+  flex-direction: row
+  position: absolute
+  left: 0px
+  height: 480px
+  .screen
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 300px
+    &:nth-child(1)
+      background: radial-gradient(#4a148c, lighten(#4a148c, 1%))
+    &:nth-child(2)
+      background: radial-gradient(#4a148c, darken(#4a148c, 5%))
+    &:nth-child(3)
+      background: radial-gradient(#4a148c, lighten(#4a148c, 10%))
+    &:nth-child(4)
+      background: radial-gradient(#4a148c, darken(#4a148c, 15%))
+    &:nth-child(5)
+      background: radial-gradient(#4a148c, lighten(#4a148c, 20%))
+    span
+      line-height: 120px
+      text-align: center
+      display: block
+      height: 120px
+      width: 120px
+      border: 2px solid #aaa
+      font-weight: bold
+      font-size: 120%
+      color:  #eee
+      text-transform: uppercase
+      //border-radius: 50%
+
 
 .mobile
   &-container
@@ -74,3 +108,7 @@ body
   &_nav--right
     +navItem
     text-align: right
+    small
+      border: 1px solid #828282
+      padding: 1px 4px
+      color: #fff

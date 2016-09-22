@@ -47,7 +47,7 @@ class MobileNav extends Component {
         </div>
 
         <div className="mobile_nav--right">
-          <small>80%</small> <i className="fa fa-battery-three-quarters" aria-hidden="true"></i>
+          <small>80%</small>
         </div>
       </div>
     )
